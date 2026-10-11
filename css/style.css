@@ -1,0 +1,119 @@
+.grande { font-size: 60px; }
+<Html!DOCTYPE>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizador de Código Premium</title>
+    <style>
+        /* Configuración global y fondo de la página */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0f141c;
+            color: #e3e6ed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Contenedor principal de la ventana de código */
+        .code-container {
+            width: 100%;
+            max-width: 700px;
+            background-color: #1a1f29;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 
+                        0 0 2px rgba(255, 255, 255, 0.05);
+            overflow: hidden;
+            border: 1px solid #2d3545;
+        }
+
+        /* Barra superior estilo ventana de Mac/Linux */
+        .code-header {
+            background-color: #161a23;
+            padding: 12px 18px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #2d3545;
+        }
+
+        /* Botones decorativos de la ventana */
+        .window-buttons {
+            display: flex;
+            gap: 8px;
+        }
+
+        .btn {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .btn-close { background-color: #ff5f56; }
+        .btn-minimize { background-color: #ffbd2e; }
+        .btn-maximize { background-color: #27c93f; }
+
+        /* Título o lenguaje de programación */
+        .code-lang {
+            font-size: 0.85rem;
+            color: #728097;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Área del bloque de código */
+        .code-body {
+            margin: 0;
+            padding: 24px;
+            overflow-x: auto;
+            background-color: #1a1f29;
+        }
+
+        /* Tipografía del código */
+        code {
+            font-family: 'Fira Code', 'Courier New', Courier, monospace;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #abb2bf;
+            text-shadow: 0 0 1px rgba(0,0,0,0.3);
+        }
+
+        /* Colores para resaltar la sintaxis (Syntax Highlighting) */
+        .keyword { color: #c678dd; font-weight: bold; } /* Palabras clave como function, return */
+        .function { color: #61afef; }                /* Nombres de funciones */
+        .string { color: #98c379; }                  /* Textos entre comillas */
+        .number { color: #d19a66; }                  /* Números */
+        .comment { color: #5c6370; font-style: italic; } /* Comentarios */
+        .tag { color: #e06c75; }                     /* Etiquetas HTML */
+        .attr { color: #d19a66; }                    /* Atributos HTML/CSS */
+    </style>
+</head>
+<body>
+
+    <!-- Ventana de Código -->
+    <div class="code-container">
+        <div class="code-header">
+            <div class="window-buttons">
+                <span class="btn btn-close"></span>
+                <span class="btn btn-minimize"></span>
+                <span class="btn btn-maximize"></span>
+            </div>
+            <div class="code-lang">JavaScript</div>
+        </div>
+        <pre class="code-body"><code><span class="comment">// Función para calcular el éxito de tu código</span>
+<span class="keyword">const</span> <span class="function">mejorarEstilo</span> = (<span class="attr">tuCodigo</span>) => {
+    <span class="keyword">let</span> <span class="attr">diseño</span> = <span class="string">"Increíble"</span>;
+    <span class="keyword">let</span> <span class="attr">puntuacion</span> = <span class="number">100</span>;
+    
+    <span class="keyword">return</span> <span class="string">`Tu diseño es ${diseño}! Nota: ${puntuacion}`</span>;
+};</code></pre>
+    </div>
+
+</body>
+</html>
